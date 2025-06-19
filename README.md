@@ -1,1 +1,1 @@
-# random_dice
+# Dicee Challenge Project
