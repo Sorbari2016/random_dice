@@ -14,6 +14,7 @@ function randomLeftImage() {
     return leftIMage[randomIndex1]
 }
 
+
 // Set the src attribute to the leftImage
 // Select the image element
 const player1Image = document.querySelector(".img1");
