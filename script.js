@@ -1,6 +1,6 @@
 // JAVASCRIPT CODE FOR THE GAME 
 
-// Create function to randomly select  random images.
+// Create function to randomly select images.
 
 function randomImages() {
     // Generate a random number between 0 & 6
@@ -29,22 +29,17 @@ let rightDisplayImage = document.querySelector(".img2").getAttribute("src");
 
 // Declare who won, or if is a tie. 
 function whoWon() {
-    let message; 
     const heading = document.querySelector("h1"); 
 
-    if (leftDispayImage === "./images/dice6.png" && rightDisplayImage === "./images/dice6.png") {
-        heading.innerHTML = ""; 
-        message = heading.innerHTML = "Draw"; 
-    } else if (leftDispayImage === "./images/dice6.png") {
-        heading.innerHTML = ""; 
-        message = heading.innerHTML = "Player 1 Won !"; 
-    } else if (rightDisplayImage === "./images/dice6.png") {
-        heading.innerHTML = ""; 
-        message = heading.innerHTML = "Player 2 Won !"; 
+    if (leftDispayImage === rightDisplayImage) {
+        heading.innerHTML = "It's Draw"; 
+    } else if (leftDispayImage > rightDisplayImage) { 
+        heading.innerHTML = "Player 1 Won"; 
+    } else if (leftDispayImage < rightDisplayImage) {
+        heading.innerHTML = "Player 2 Won !"; 
     } else {
         heading.innerHTML = "Refresh Me"; 
     }
-    return message; 
 }
 
 whoWon(); 
